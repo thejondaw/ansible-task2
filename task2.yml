@@ -53,8 +53,8 @@
 
   - name: Download Template
     get_url:
-      url: https://www.free-css.com/assets/files/free-css-templates/download/page296/finexo.zip
-      dest: /tmp/finexo.zip
+      url: https://www.free-css.com/assets/files/free-css-templates/download/page296/browny.zip
+      dest: /tmp/browny.zip
 
   - name: Install Unzip
     apt:
@@ -63,11 +63,11 @@
 
   - name: Extract Template
     unarchive:
-      src: /tmp/finexo.zip
+      src: /tmp/browny.zip
       dest: /tmp/
       remote_src: yes   
 
   - name: Move Template Files
-    shell: mv /tmp/finexo-html/* /var/www/html/
+    shell: mv /tmp/browny-v1.0/* /var/www/html/
     args:
       creates: /var/www/html/index.html
